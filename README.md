@@ -15,3 +15,9 @@ Clique em view code.
 
 * Depois vá ao código que você quer.
 <img src= "https://cdn.discordapp.com/attachments/656246510496907280/716274454858301480/20200530_095615.jpg">
+
+## Links 📎
+
+* **[canal do YouTube](https://youtube.com/botdesignerfordiscordbr)**
+* **[Servidor do Discord](https://discord.gg/E7qr3Qw)**
+* **[Github repositórios](https://github.com/BotDesignerForDiscordBR)**
