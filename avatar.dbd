@@ -1,0 +1,7 @@
+avatar:
+$argsCheck[>1;❌ | Você Precisa Mencionar Alguém!]
+$title[Avatar]
+$color[f60095]
+$description[Aqui está]
+$image[$userAvatar[$mentioned[<]]]
+$nomention
