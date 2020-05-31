@@ -1,0 +1,6 @@
+bal:
+$nomention
+$title[Dinheiro]
+$color[2737]
+$description[$username Você tem $$getUserVar[trabalho]
+]
