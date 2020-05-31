@@ -1,0 +1,6 @@
+clear:
+$title[Clear]
+$color[3682]
+$description[$username Limpou $message mensagens]
+$nomention
+$clear
