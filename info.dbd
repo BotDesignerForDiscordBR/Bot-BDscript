@@ -1,0 +1,22 @@
+server info:
+$nomention **Informações de Servidor**
+$footer[Server Info]
+$color[$random[0;9999999]]
+$serverInfo[
+Nome : {name}
+Região: {region}
+Dono: {owner}
+Verificado: {verificationLvl}
+Emojis costumizados: {emoji}]
+
+user info:
+$nomention
+**Informações de usuário**
+$color[5828]
+$userInfo[
+Nome: {username}
+ID: {ID}
+É um bot: {BOT}
+Verificado: {verified}
+Tag: {discriminator}
+]
