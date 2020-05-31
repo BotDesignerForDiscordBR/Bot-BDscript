@@ -1,0 +1,29 @@
+unmute:
+$argsCheck[>1;Por Favor Mencione Alguém Para Desmutar.]
+$nomention $unmute[Muted]
+$onlyPerms[manageroles;**Você Não Tem Permissão Para Usar Esse Comando!**]
+$title[**Unmute**]
+$color[f60095]
+$footer[Desmutado Por $username.]
+$description[
+
+Desmutado: <@$mentioned[<]>
+Desmutado por: <@$authorID>
+]
+$onlyBotPerms[manageroles;Eu não tenho a permissão de ``Gerenciar Cargos``, por favor me dê essa permissão para que o comando possa ser executado]
+
+
+mute:
+$argsCheck[>1;Por favor mencione alguém para mutar]
+$nomention $mute[Muted]
+$onlyPerms[manageroles;**Você não tem permissão para usar esse comando!**]
+$title[**Mute**]
+$color[f60095]
+$footer[Mutado por $username.]
+$description[
+
+Mutado: <@$mentioned[<]>
+Mutado por: <@$authorID>
+Razão: $noMentionMessage
+]
+$onlyBotPerms[manageroles;Eu não tenho a permissão de ``Gerenciar Cargos``, por favor me dê essa permissão para que o comando possa ser executado]
