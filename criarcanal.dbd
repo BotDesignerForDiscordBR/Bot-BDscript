@@ -1,0 +1,7 @@
+criar canal de texto:
+$title[Canal]
+$color[2684]
+$description[Canal criado 📁 por $username.
+Nome do canal: $message]
+$createChannel[$message;text]
+$nomention 
