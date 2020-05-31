@@ -1,0 +1,22 @@
+ban:
+$argsCheck[>1;❌ | Você Precisa Mencionar Alguém Para Banir!]
+$title[BAN]
+$color[15825]
+$description[Banido: $message
+Autor: $username
+Razão: $noMentionMessage]
+$ban $nomention $allowMention
+
+kick:
+$argsCheck[>1;Por favor mencione alguém para expulsar]
+$nomention $kickMention
+$onlyPerms[manageroles;:error:**Você não tem permissão para usar esse comando!**]
+$title[**Kick**]
+$color[#FF0000]
+$footer[Expulso por $username.]
+$description[
+
+Expulso: <@$mentioned[<]>
+Expulso Por: <@$authorID>
+Razão: $noMentionMessage
+]
