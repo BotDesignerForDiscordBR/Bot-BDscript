@@ -5,3 +5,11 @@ $description[Canal criado 📁 por $username.
 Nome do canal: $message]
 $createChannel[$message;text]
 $nomention 
+
+criar canal de voz:
+$title[Canal]
+$color[2684]
+$description[Canal de voz criado 🎤 por $username.
+Nome do canal: $message]
+$createChannel[$message;voice]
+$nomention
