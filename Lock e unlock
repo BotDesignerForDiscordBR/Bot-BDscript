@@ -1,0 +1,13 @@
+lock:
+$nomention
+$modifyChannelPerms[$channelID;-sendmessages;$guildID]
+$title[Canal de texto]
+$description[Este canal foi trancado!]
+$onlyAdmin[Apenas para admins!]
+
+unlock:
+$nomention
+$modifyChannelPerms[$channelID;+sendmessages;$guildID]
+$title[Canal de texto]
+$description[Este canal foi destrancado!]
+$onlyAdmin[Apenas para admins!]
