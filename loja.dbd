@@ -1,0 +1,14 @@
+loja:
+$nomention
+$title[Loja]
+$description[$username bem vindo a loja! abaixo estará os itens a venda
+
+tv
+preço: 300
+
+celular
+preço: 200
+
+]
+$color[#ffffff]
+$footer[use !comprar <item>]
