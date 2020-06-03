@@ -9,7 +9,7 @@ $footerIcon[$authorAvatar]
 trabalho global:
 $nomention
 $globalCooldown[1m;Espere 1 minuto para trabalhar novamente!]
-$setVar[dinheiro;$sub[$getVar[dinheiro;$authorID];$random[50;100]];$authorID]
+$setVar[dinheiro;$sum[$getVar[dinheiro;$authorID];$random[50;100]];$authorID]
 $title[Trabalho]
 $description[Enquanto você estava trabalhando, você ganhou seu pagamento de $random[50;100]]
 $color[#000000]
