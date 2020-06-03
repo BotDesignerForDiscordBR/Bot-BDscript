@@ -1,0 +1,26 @@
+fight:
+$nomention
+$onlyIf[$getUserVar[vida]>=0;<@$authorID> você não tem vida suficiente para ir a Dungeon!]
+$setUserVar[vida;$sub[$getUserVar[vida];$random[5;15]]]
+$setUserVar[xp;$sum[$getUserVar[xp];$random[15;50]]]
+$title[Dungeon Slime]
+$description[Enquanto Você estava andando pela Dungeon, um slime lhe atacou e tirou [5;15] de vida
+Você revidou e matou ele!
+$addField[Resultados;
+$username você ficou com $sub[$getUserVar[vida];$random[5;15]]
+
+ele dropou $random[50;100] moedas e $random[15;50] XP
+]]
+$setUserVar[dinheiro;$sum[$getUserVar[dinheiro];$random[50;100]]]
+$color[#ffffff]
+
+status atualizado:
+$nomention
+$title[Status do Jogador $username]
+$description[
+Vida: ❤$getUserVar[vida]
+
+XP: $getUserVar[xp]
+
+$addField[Relacionamento;$getVar[casados;$authorID]]]
+$color[#ffffff]
