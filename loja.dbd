@@ -12,3 +12,22 @@ preço: 200
 ]
 $color[#ffffff]
 $footer[use !comprar <item>]
+
+comprar tv:
+$nomention
+$onlyIf[$getUserVar[dinheiro]>=300;$username Você não tem R$300]
+$title[Compra]
+$color[#ffffff]
+$description[Você comprou uma tv por R$300] 
+$setUserVar[dinheiro;$sub[$getUserVar[dinheiro];300]]
+$setUserVar[tv;$sum[$getUserVar[tv];1]]
+ 
+comprar celular:
+$nomention
+$onlyIf[$getUserVar[dinheiro]>=200;$username Você não tem R$200]
+$title[Compra]
+$color[#ffffff]
+$description[Você comprou um celular por R$200] 
+$setUserVar[dinheiro;$sub[$getUserVar[dinheiro];200]]
+$setUserVar[celular;$sum[$getUserVar[celular];1]]
+ 
