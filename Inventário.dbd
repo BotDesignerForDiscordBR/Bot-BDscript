@@ -1,0 +1,7 @@
+inventário:
+$nomention
+$title[$username este é seu inventário]
+$description[Você tem `$getUserVar[tv]` TVs
+
+Você tem `$getUserVar[celular]` Celulares]
+$color[#ffffff]
