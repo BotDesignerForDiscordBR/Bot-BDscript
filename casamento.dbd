@@ -1,0 +1,22 @@
+pedir casamento:
+$nomention
+$onlyIf[$isBot[$mentioned[1]]==false;Por favor, mencione uma pessoa!]
+$onlyIf[$getVar[pedidos;$authorID]==no;Você já tem pedidos de casamentos!]
+$onlyIf[$getVar[pedidos2;$mentioned[1]==no;Usuário mencionado já tem pedidos de casamentos!]]
+$onlyIf[$getVar[casados;$author]==no;Você já está casado(a)!]
+$onlyIf[$getVar[casados;$mentioned[1]]==no;o usuário mencionado já está casado(a)!]
+$setVar[pedidos;sim;$authorID]
+$setVar[pedidos2;sim;$mentioned[1]]
+<@$mentioned>, $username lhe pediu em casamento. Digite `!casar <@usuário>` para aceitar!
+ 
+aceitar casamento:
+$nomention
+$onlyIf[$getVar[pedidos;$mentioned[1]]==sim;O usuario mencionado já tem pedidos de casamento!]
+$onlyIf[$getVar[pedidos2;$authorID]==sim;Você não tem pedidos de casamento!]
+$onlyIf[$getVar[casados;$authorID]==no;Você já está casado(a)!]
+$onlyIf[$getVar[casados;$mentioned[1]]==no;O usuário mencionado já está casado(a)!]
+$setVar[pedidos2;no;$authorID]
+$setVar[pedidos;no;$mentioned[1]]
+$setVar[casados;$username;$mentioned[1]]
+$setVar[casados;$username[$mentioned[1]];$authorID]
+<@$mentioned[1]>, $username aceitou seu pedido de casamento!
