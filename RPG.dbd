@@ -24,3 +24,10 @@ XP: $getUserVar[xp]
 
 $addField[Relacionamento;$getVar[casados;$authorID]]]
 $color[#ffffff]
+
+heal:
+$nomention
+$setUserVar[vida;50]
+$title[Healing!]
+$description[Você realou sua vida em 100%]
+$color[#ffffff]
