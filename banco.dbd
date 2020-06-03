@@ -1,0 +1,33 @@
+dep all:
+$nomention
+$onlyIf[$getUserVar[dinheiro]>=20;Você precisa ter mais que 20 moedas para depositar no banco!]
+$setUserVar[banco;$sum[$getUserVar[banco];$getUserVar[dinheiro]]]
+$setUserVar[dinheiro;$sub[$getUserVar[dinheiro];$getUserVar[dinheiro]]]
+<@$authorID> você depositou tudo em sua conta bancária!
+
+sacar all:
+$nomention
+$onlyIf[$getUserVar[banco]>=20;Você precisa ter mais que 20 moedas para sacar do banco!]
+$setUserVar[banco;$sub[$getUserVar[banco];$getUserVar[banco]]]
+$setUserVar[dinheiro;$sum[$getUserVar[dinheiro];$getUserVar[banco]]]
+<@$authorID> você sacou tudo em sua conta bancária!
+
+sacar:
+$nomention
+$argsCheck[>1;Digite um número para sacar]
+$onlyIf[$message[1]!=all;]
+$onlyIf[$isNumber[$noMentionMessage[1]]==true;por favor Digite em numeros]
+$onlyIf[$getUserVar[banco]>=$noMentionMessage[1];Você não tem essa quantia!]
+$setUserVar[dinheiro;$sum[$getUserVar[dinheiro];$noMentionMessage[1]]]
+$setUserVar[banco;$sub[$getUserVar[banco];$noMentionMessage[1]]]
+<@$authorID> você sacou **$noMentionMessage[1]** na sua conta do banco!
+
+dep:
+$nomention
+$argsCheck[>1;Digite um número para depositar]
+$onlyIf[$message[1]!=all;]
+$onlyIf[$isNumber[$noMentionMessage[1]]==true;por favor Digite em numeros]
+$onlyIf[$getUserVar[dinheiro]>=$noMentionMessage[1];Você não tem essa quantia!]
+$setUserVar[dinheiro;$sub[$getUserVar[dinheiro];$noMentionMessage[1]]]
+$setUserVar[banco;$sum[$getUserVar[banco];$noMentionMessage[1]]]
+<@$authorID> você depositou **$noMentionMessage[1]** na sua conta do banco!
