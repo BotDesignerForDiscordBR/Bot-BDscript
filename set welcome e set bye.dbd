@@ -1,0 +1,25 @@
+set welcome:
+$setServerVar[entrada;$mentionedChannels[1]]
+Canal de bem-vindo setado para <#$mentionedChannels[1]>
+$onlyAdmin[Você precisa da permissão de ``Administrador`` para usar esse comando]
+$suppressErrors[Algo deu errado ao executar esse comando]
+$argsCheck[>1;Você precisa definir um canal para ser usado nas mensagens de entrada]
+
+set bye:
+$setServerVar[saida;$mentionedChannels[1]]
+Canal de saída setado para <#$mentionedChannels[1]>
+$onlyAdmin[Você precisa da permissão de ``Administrador`` para usar esse comando]
+$suppressErrors[Algo deu errado ao executar esse comando]
+$argsCheck[>1;Você precisar definir um canal para ser usado nas mensagens de saida]
+
+entrada:
+$title[Bem-vindo!]
+$color[$random[0;99999]]
+$description[<@$authorID> seja bem-vindo ao servidor $serverName[$guildID], espero que se divirta no nosso servidor!]
+$footer[ID do usuário: $authorID]
+
+saída:
+$title[Saída]
+$color[$random[0;9999]]
+$description[$username#$discriminator[$authorID] saiu do servidor, espero que volte um dia.]
+$footer[ID do usuário: $authorID]
