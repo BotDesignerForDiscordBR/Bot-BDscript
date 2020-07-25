@@ -1,0 +1,16 @@
+Quebrar picareta: 
+$nomention
+$onlyIf[$getUserVar[drpick]<=0;]
+$onlyIf[$getUserVar[picareta]>=1;]
+**PRAACK!**
+$editIn[2s;<@$authorID> sua picareta quebrou!]
+$setUserVar[picareta;0]
+
+Minerar:
+$nomention
+$onlyIf[$getUserVar[picareta]>=1;Você não tem uma picareta!]
+$setUserVar[drpick;$sub[$getUserVar[drpick];1]]
+$setUserVar[dinheiro;$sum[$getUserVar[dinheiro];$random[1;50]]]
+$title[Mineração⛏️]
+$description[$username, enquanto você minerava, você achou $random[1;50] moedas!]
+$color[#ffffff]
