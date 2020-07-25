@@ -31,3 +31,12 @@ $description[Você comprou um celular por R$200]
 $setUserVar[dinheiro;$sub[$getUserVar[dinheiro];200]]
 $setUserVar[celular;$sum[$getUserVar[celular];1]]
  
+Comprar picareta:
+$nomention
+$onlyIf[$getUserVar[dinheiro]>=100;Você não tem moedas suficiente!]
+$setUserVar[picareta;$sum[$getUserVar[picareta];1]]
+$setUserVar[drpick;$sum[$getUserVar[drpick];15]]
+$title[Compra!]
+$description[$username você comprou uma picareta por 100 moedas!]
+$footer[Use !mine para minerar.]
+$color[#ffffff]
