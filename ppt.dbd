@@ -1,0 +1,22 @@
+ppt:
+$title[Parece que algo deu errado]
+$color[16711680]
+$description[Eu não consegui reconhecer ``pedra``, ``papel`` e nem ``tesoura``. Tente usar o comando novamente.]
+$onlyIf[$message!=pedra;]
+$onlyIf[$message!=papel;]
+$onlyIf[$message!=tesoura;]
+
+ppt pedra:
+$title[Pedra, papel e tesoura]
+$color[16711680]
+$description[Você jogou pedra, eu joguei $randomText[pedra, deu empate.;papel, eu ganhei.;tesoura, você ganhou.]]
+
+ppt papel:
+$title[Pedra, papel e tesoura]
+$color[16711680]
+$description[Você jogou papel, eu joguei $randomText[pedra, você ganhou.;papel, deu empate.;tesoura, eu ganhei.]]
+
+ppt tesoura:
+$title[Pedra, papel e tesoura]
+$color[16711680]
+$description[Você jogou tesoura, eu joguei $randomText[pedra, eu ganhei.;papel, você ganhou.;tesoura, deu empate.]]
