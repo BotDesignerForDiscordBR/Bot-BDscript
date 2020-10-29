@@ -1,0 +1,40 @@
+Iniciar Blackjack
+$nomention
+$onlyIf[$getUserVar[inicio]==0; <@$authorID>, você já iniciou uma partida!]
+$setUserVar[carta1;$random[1;15]]
+$setUserVar[carta2;$random[1;10]]
+$setUserVar[inicio;1]
+$title[Blackjack iniciado!]
+$description[Para visualizar suas cartas, digite !cartas
+
+para comprar novas cartas, digite !comprar carta <número da carta>]
+$color[#ffffff]
+
+Ver cartas
+$nomention
+$onlyIf[$getUserVar[inicio]==1;<@$authorID>, você ainda não iniciou uma partida!]
+$onlyIf[$isUserDMEnabled[$authorID]==true;<@$authorID> abra a sua dm!]
+$dm
+> `carta 1` : $getUserVar[carta1]
+> `carta 2` : $getUserVar[carta2]
+> `carta 3` : $getUserVar[carta3]
+> `carta 4` : $getUserVar[carta4]
+> `carta 5` : $getUserVar[carta5]
+> `carta 6` : $getUserVar[carta6]
+> `carta 7` : $getUserVar[carta7]
+> `carta 8` : $getUserVar[carta8]
+> `carta 9` : $getUserVar[carta9]
+> `carta 10` : $getUserVar[carta10]
+> para comprar novas cartas, digite !comprar carta <número da carta>
+.
+
+Comprar cartas
+$nomention
+$onlyIf[$getUserVar[inicio]==1;<@$authorID>, inicie uma partida!]
+$onlyIf[$getUserVar[limite]==0;Você só pode comprar uma carta por partida!]
+$onlyIf[$message[1]>=1;Digite um número da carta entre 1-10]
+$onlyIf[$message[1]<=10;Digite um número da carta entre 1-10]
+> <@$authorID> você comprou a carta **$message[1]**
+$setUserVar[carta$message[1];$random[1;15]]
+$setUserVar[limite;1]
+$suppressErrors[]
