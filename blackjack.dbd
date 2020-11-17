@@ -38,3 +38,49 @@ $onlyIf[$message[1]<=10;Digite um número da carta entre 1-10]
 $setUserVar[carta$message[1];$random[1;15]]
 $setUserVar[limite;1]
 $suppressErrors[]
+
+Apostar bot
+$nomention
+$onlyIf[$message[1]>=1;]
+$onlyIf[$message[1]<=10;]
+$onlyIf[$getUserVar[carta$message[1]]>=1;]
+$onlyIf[$getUserVar[inicio]==1;]
+> **O bot apostou $random[1;7]**
+> **Número da carta: $random[1;10]**
+$setUserVar[valor;$sum[$getUserVar[valor];$random[1;7]]]
+
+Apostar usuário
+$nomention
+$onlyIf[$message[1]>=1;> <@$authorID> digite um número da carta de 1 a 10.]
+$onlyIf[$message[1]<=10;> <@$authorID> digite um número da carta de 1 a 10.]
+$onlyIf[$getUserVar[inicio]==1;> <@$authorID> você ainda não iniciou uma partida!]
+$onlyIf[$getUserVar[carta$message[1]]>=1;> <@$authorID> você não tem essa carta!]
+> **<@$authorID> você apostou $getUserVar[carta$message[1]]**
+> **número da carta: $message[1]**
+> ** **
+> Valor da aposta atual: **$sum[$getUserVar[valor];$getUserVar[carta$message[1]]]**
+$setUserVar[valor;$sum[$getUserVar[valor];$getUserVar[carta$message[1]]]]
+$setUserVar[carta$message[1];0]
+$setUserVar[limite;0]
+
+Finalização
+$nomention
+$onlyIf[$message[1]>=1;]
+$onlyIf[$message[1]<=10;]
+$onlyIf[$getUserVar[valor]>=21;]
+$onlyIf[$getUserVar[inicio]==1;]
+> **O valor foi ultrapassado! Fim da partida.**
+$setUserVar[valor;0]
+$setUserVar[carta1;0]
+$setUserVar[carta2;0]
+$setUserVar[carta3;0]
+$setUserVar[carta4;0]
+$setUserVar[carta5;0]
+$setUserVar[carta6;0]
+$setUserVar[carta7;0]
+$setUserVar[carta8;0]
+$setUserVar[carta9;0]
+$setUserVar[carta10;0]
+$setUserVar[inicio;0]
+$setUserVar[limite;0]
+$setUserVar[valor;0]
