@@ -1,0 +1,7 @@
+$onlyAdmin[Only Admin]$title[$message]
+$color[$random[0;999999]]$suppressErrors
+$nomention
+$deletecommand
+$clear[999999999999999999]
+$description[$username Nuked This Channel]
+$image[https://media.tenor.com/images/04dc5750f44e6d94c0a9f8eb8abf5421/tenor.gif]
