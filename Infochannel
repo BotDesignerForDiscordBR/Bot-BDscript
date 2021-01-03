@@ -1,0 +1,14 @@
+$nomention
+$color[B44D00]
+$onlyIf[$message[1]!=$mentionedChannels[1];Mencione algum canal!]
+$title[Informações do canal]
+$description[
+**📚丨NOME:**
+$channelName[$mentionedChannels[1]]
+-------------
+**🆔丨ID:**
+$mentionedChannels[1]
+-------------
+**📆丨CRIADO EM:**
+$creationDate[$mentionedChannels[1]]]
+
