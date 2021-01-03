@@ -1,0 +1,8 @@
+``$title[🌟 o ícone do server]
+$color[#0000FF]
+$description[[clique aqui]($serverIcon) para baixar a imagem 
+
+ícone pedido por:$username]
+$image[$serverIcon]
+$footer[o ícone do server]
+$deletecommand``
