@@ -34,6 +34,7 @@ $setUserVar[celular;$sum[$getUserVar[celular];1]]
 Comprar picareta:
 $nomention
 $onlyIf[$getUserVar[dinheiro]>=100;Você não tem moedas suficiente!]
+$setUserVar[dinheiro;$sub[$getUserVar[dinheiro];100]]
 $setUserVar[picareta;$sum[$getUserVar[picareta];1]]
 $setUserVar[drpick;$sum[$getUserVar[drpick];15]]
 $title[Compra!]
