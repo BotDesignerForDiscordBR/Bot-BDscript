@@ -1,0 +1,16 @@
+afk:
+$nomention
+$if[$getUserVar[afk;$authorID]!=x]
+Você saiu do modo afk, para entrar digite: `!afk <motivo>`.
+$setUserVar[afk;x;$authorID]
+$else
+Você entrou no modo afk pelo motivo `$replaceText[$replaceText[${$message}$;${}$;Não inserido;1];${$message}$;$message;1]`, para sair do modo afk digite: `!afk`.
+$setUserVar[afk;$replaceText[$replaceText[${$message}$;${}$;Não inserido;1];${$message}$;$message;1];$authorID]
+$endif
+
+<@:
+$reply
+$nomention
+$onlyIf[$getUserVar[afk;$mentioned[1]]!=x;]
+$description[O usuário mencionado está afk pelo seguinte motivo `$getUserVar[afk;$mentioned[1]]`] 
+
