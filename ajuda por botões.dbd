@@ -1,0 +1,24 @@
+Gatilho: !ajuda
+$nomention
+$title[Tutorial]
+$description[Clique nos botões para ir a categoria!]
+$addButton[no;admin;admin;primary;no;]
+$addButton[no;economia;economia;primary;no;]
+
+
+Gatilho: $onInteraction[admin]
+$nomention
+$title[Tutorial]
+$description[Comandos de admin:
+-
+-
+-]
+
+
+Gatilho: $onInteraction[economia]
+$nomention
+$title[Tutorial]
+$description[Comandos de economia:
+-
+-
+-]
