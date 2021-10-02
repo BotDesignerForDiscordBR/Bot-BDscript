@@ -12,17 +12,15 @@ $color[00ff00] 
 
 $onInteraction[score]:
 $nomention
-$editButton[score;PLACAR;danger;no;🏅]
-$setVar[click;$sum[$getVar[click;$authorID];1];$authorID]
-$setVar[tClick;$sum[$getVar[tClick];1]]
-$setVar[uClick;$authorID]
-$title[Click]
-$description[`\``kt
-Total de cliques "$getVar[tClick]"`\``]
+$editButton[score;PLACAR;danger;yes;🏅]
+$title[Score]
+$globalUserLeaderboard[click;asc]
+$addField[Clique;```kt
+Total de cliques "$getVar[tClick]"```]
 $addField[Último clique:;**Usuário:** <@$getVar[uClick]> (`$getVar[uClick]`)
 **Cliques:** $getVar[click;$getVar[uClick]]]
-$footer[Primeiro lugar: $getLeaderboardValue[globalUser;click;asc;1] cliques]
-$color[$random[0;999999]]
+$footer[Primeiro lugar;$getLeaderboardValue[globalUser;click;asc;1] cliques]
+$color[0000ff]
 
 $onInteraction[click]:
 $nomention
