@@ -1,0 +1,26 @@
+afk:
+$reply
+$nomention
+$if[$getUserVar[afk;$authorID]!=×]
+$if[$message!=]
+$description[Você atualizou sua mensagem de afk de `$getUserVar[afk;$authorID]` para `$message`, para desativar o afk digite: `?afk`.]
+$color[f1c40f]
+$setUserVar[afk;$message;$authorID]
+$else
+$description[Você saiu do modo afk, para entrar digite: `?afk <motivo>`.]
+$color[ff0000]
+$setUserVar[afk;×;$authorID]
+$endif
+$else
+$description[Você entrou no modo afk pelo motivo `$replaceText[$replaceText[${$message}$;${}$;Não insirido;1];${$message}$;$message;1]`, para sair do modo afk digite: `?afk`.]
+$color[2ecc71]
+$setUserVar[afk;$replaceText[$replaceText[${$message}$;${}$;Não insirido;1];${$message}$;$message;1];$authorID]
+$endif  
+
+<@:
+$reply
+$nomention
+$onlyIf[$authorID!=$mentioned[1];]
+$onlyIf[$getUserVar[afk;$mentioned[1]]!=×;]
+$description[O usuário mencionado está afk pelo seguinte motivo `$getUserVar[afk;$mentioned[1]]`]
+$color[ff0000] 
