@@ -1,0 +1,20 @@
+$onlyPerms[managemessages;Você não tem a permissão necessária para executar esse comando. **Requer:** __Gerenciar Mensagens__.]
+$onlyIf[$isNumber[$noMentionMessage]==true;Não entendi a quantidade de mensagens que você quer que eu apague. **Use:** `!limpar <quantidade> {@user}`]
+$onlyIf[$noMentionMessage<=100;Eu só consigo apagar de 2 a 100 mensagens por comando.]
+$argsCheck[>1;**Use:** `!limpar <quantidade> {@user}`]
+$onlyIf[$noMentionMessage>=2;Eu só consigo apagar de 2 a 100 mensagens por comando.]
+$​nomention
+$onlyIf[$noMentionMessage!=;Você não colocou a quantidade de mensagens a ser apagada. **Use:** `!limpar <quantidade> {@user}`]
+$title[LIMPADOR:]
+$description[Deletando mensagens...]
+$​editIn[1s;
+Sucesso, apagado $​noMentionMessage $​replaceText[$​replaceText[&$​mentioned[1]&;&&;últimas mensagens do chat.;1];&$​mentioned[1]&;últimas mensagens de;1] $​replaceText[$​replaceText[&$​mentioned[1]&;&&;;1];&$​mentioned[1]&;<@$​mentioned[1]>;1]]
+$​clear[$​noMentionMessage;$​replaceText[$​replaceText[&$​mentioned[1]&;&&;;1];&$​mentioned[1]&;$​mentioned[1];1];no]
+$color[$random[0;999999]]
+$deleteIn[11s]
+$deletecommand
+$cooldown[11s;<@$authorID> aguarde __%time%__ para usar esse comando novamente.]
+$footer[Limpo por: $username[$authorID]#$discriminator[$authorID]]
+$footerIcon[$userAvatar[$authorID]]
+$embedSuppressErrors[❌ ERROR ❌; Relate esse erro ao meu criador; FF0000; ; ; ]
+$onlyBotPerms[managemessages;Eu não tenho permissão de **Gerenciar mensagens**, por tanto não posso executar esse comando.]
